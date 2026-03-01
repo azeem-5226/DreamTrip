@@ -59,18 +59,25 @@ animation:fadeIn 2s ease;
 }
 
 .hero h1{font-size:55px;margin-bottom:15px;}
-.hero button{
-padding:14px 35px;
-background:#ff7f50;
-border:none;
-border-radius:30px;
-font-weight:600;
-cursor:pointer;
-transition:0.3s;
+
+    html{
+    scroll-behavior: smooth;
 }
-.hero button:hover{
-background:#ff5722;
-transform:scale(1.1);
+
+.explore-btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#ff7f50;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.explore-btn:hover{
+    background:#ff5722;
+    transform:scale(1.08);
 }
 
 /* DESTINATIONS */
@@ -187,11 +194,11 @@ nav ul li{margin:15px 0;}
 <section class="hero">
 <h1>Discover The World</h1>
 <p>Travel Beautiful Places With DreamTrip Travels</p>
-<button>Explore Now</button>
+<a href="#destinations" class="explore-btn">Explore Now</a>
 </section>
 
-<section class="destinations">
-<h2>Popular Destinations</h2>
+<section id="destinations" class="destinations">
+    <h2>Popular Destinations</h2>
 <div class="destination-container">
 <div class="card">
 <img src="images/paris.jpg">
@@ -251,4 +258,5 @@ document.getElementById("menu").classList.remove("show");
 </script>
 
 </body>
+
 </html>
