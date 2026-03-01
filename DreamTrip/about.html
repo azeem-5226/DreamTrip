@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About - DreamTrip Travels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#333;}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#0a3d62;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo a{
+    color:white;
+    text-decoration:none;
+}
+
+.logo a:hover{
+    color:#f6b93b;
+}
+
+.logo{font-size:22px;font-weight:700;}
+
+nav ul{display:flex;list-style:none;}
+nav ul li{margin-left:25px;}
+nav ul li a{
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+nav ul li a:hover{color:#f6b93b;}
+
+.hamburger{display:none;font-size:28px;cursor:pointer;}
+
+/* HERO */
+.about-hero{
+height:60vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("images/about.webp") center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+flex-direction:column;
+padding:20px;
+animation:fadeIn 1.5s ease;
+}
+
+.about-hero h1{font-size:48px;}
+
+/* ABOUT CONTENT */
+.about-content{
+padding:100px 80px;
+display:flex;
+gap:50px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.about-text{
+flex:1;
+min-width:300px;
+animation:slideLeft 1s ease forwards;
+opacity:0;
+}
+
+.about-text h2{
+margin-bottom:20px;
+color:#0a3d62;
+}
+
+.about-text p{
+margin-bottom:15px;
+line-height:1.7;
+}
+
+.about-image{
+flex:1;
+min-width:300px;
+text-align:center;
+animation:slideRight 1s ease forwards;
+opacity:0;
+}
+
+.about-image img{
+width:100%;
+max-width:450px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* VALUES SECTION */
+.values{
+padding:80px 60px;
+background:#f0f4f8;
+text-align:center;
+}
+
+.value-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.value-card{
+width:280px;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.value-card:hover{
+transform:translateY(-12px);
+}
+
+.value-card h3{
+margin-bottom:15px;
+color:#0a3d62;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:white;
+padding:60px;
+text-align:center;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes slideLeft{
+from{transform:translateX(-60px);opacity:0;}
+to{transform:translateX(0);opacity:1;}
+}
+
+@keyframes slideRight{
+from{transform:translateX(60px);opacity:0;}
+to{transform:translateX(0);opacity:1;}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+nav{padding:20px;}
+
+nav ul{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#0a3d62;
+text-align:center;
+padding:20px 0;
+}
+
+nav ul.show{display:flex;}
+nav ul li{margin:15px 0;}
+.hamburger{display:block;}
+
+.about-content{
+flex-direction:column;
+padding:60px 20px;
+}
+
+.values{
+padding:60px 20px;
+}
+
+.value-card{
+width:90%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        <a href="index.html">DreamTrip</a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="about-hero">
+<h1>About DreamTrip Travels</h1>
+<p>Creating unforgettable travel experiences worldwide</p>
+</section>
+
+<section class="about-content">
+<div class="about-text">
+<h2>Who We Are</h2>
+<p>DreamTrip Travels is a leading travel company dedicated to providing exceptional travel experiences across the globe.</p>
+<p>We offer customized tour packages, hotel bookings, and complete travel solutions tailored to your needs.</p>
+</div>
+
+<div class="about-image">
+<img src="images/about2.webp">
+</div>
+</section>
+
+<section class="values">
+<h2>Our Core Values</h2>
+
+<div class="value-container">
+<div class="value-card">
+<h3>Trust</h3>
+<p>We build long-term relationships through transparency and reliability.</p>
+</div>
+
+<div class="value-card">
+<h3>Quality</h3>
+<p>We ensure premium service and unforgettable travel experiences.</p>
+</div>
+
+<div class="value-card">
+<h3>Customer First</h3>
+<p>Your satisfaction is our top priority in every journey.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>DreamTrip Travels Pvt Ltd</p>
+<p>Mumbai, India</p>
+<p>Email: info@dreamtrip.com</p>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
+}
+
+document.querySelectorAll("#menu a").forEach(link=>{
+link.addEventListener("click",()=>{
+document.getElementById("menu").classList.remove("show");
+});
+});
+</script>
+
+</body>
+</html>
